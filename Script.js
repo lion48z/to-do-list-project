@@ -22,6 +22,17 @@ form.addEventListener('submit', function(event) {
     localStorage.setItem(task, task);
    });
    
+   function addTaskToList(task) {
+    var listItem = document.createElement('li');
+    listItem.textContent = task;
+    listItem.addEventListener('click', function() {
+      listItem.remove();
+      localStorage.removeItem(task);
+    });
+  
+    list.appendChild(listItem);
+  }
+  
 
        
 
