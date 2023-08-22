@@ -4,7 +4,14 @@ var input = document.getElementById('todo-input');
 var input = document.getElementById('todo-list');
 
 //load tasks from user input
-window.addEventListener('load', function() {
-    console.log('Page has loaded!');
+window.addEventListener ('load', function() {
+    for (var i = 0; i < localStorage.length; i++) { 
+    addTaskToList(localStorage.key(i));   
+}
 });
+
+       
+
+
+
 
