@@ -10,6 +10,19 @@ window.addEventListener ('load', function() {
 }
 });
 
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+ //input and submit tasks  
+   
+    var task = input.value;
+    input.value = '';
+   
+  //adds task to to do list  
+    addTaskToList(task);
+    localStorage.setItem(task, task);
+   });
+   
+
        
 
 
